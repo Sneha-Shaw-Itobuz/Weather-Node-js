@@ -1,18 +1,14 @@
-
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "node:url";
 
-
 const __filename = fileURLToPath(import.meta.url);
 
 const __dirname = path.dirname(__filename);
+
 const readFileData = () => {
   try {
-    const data = fs.readFileSync(
-      path.join(__dirname, "weatherDb.txt"),
-      "utf8"
-    );
+    const data = fs.readFileSync(path.join(__dirname, "weatherDb.txt"), "utf8");
     return JSON.parse(data);
   } catch (error) {
     console.log(error);
