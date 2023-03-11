@@ -1,11 +1,12 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "node:url";
-
+// console.log(import.meta.url);
 const __filename = fileURLToPath(import.meta.url);
-
+// console.log(__filename);
 const __dirname = path.dirname(__filename);
-
+// console.log(__dirname);
+// console.log(path.join(__dirname, "weatherDb.txt"))
 const readFileData = () => {
   try {
     const data = fs.readFileSync(path.join(__dirname, "weatherDb.txt"), "utf8");
